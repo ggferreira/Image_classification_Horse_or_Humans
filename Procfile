@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run horse_breeds_app.py
+web: sh setup.sh && streamlit run horse_or_human_app.py
