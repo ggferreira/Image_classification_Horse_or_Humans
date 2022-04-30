@@ -3,7 +3,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 
-def teachable_machine_classification(img, weights_file):
+def image_classification(img, weights_file):
     # Load the model
     model = keras.models.load_model(weights_file, compile=False)
 
