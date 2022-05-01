@@ -2,15 +2,15 @@ import streamlit as st
 from img_classification import image_classification
 from PIL import Image
 
-st.title('Classificação de imagem com Teachable Machine do Google')
-st.header("Reconhece a imagem de um Cavalo ou de um Ser Humano")
+st.title('Classificação de Imagem')
+st.subheader("Reconhece a imagem de um Cavalo ou de um Ser Humano")
 st.text("Insira a imagem de um Cavalo ou Ser Humano")
-st.text("Obs: a imagem tem que ser no formato .jpg")
 
 
 uploaded_file = st.file_uploader("Escolha uma foto", type="jpg")
+st.caption("Obs: a imagem tem que ser no formato .jpg")
 if uploaded_file is None:
-    st.text("Você não inseriu nem uma imagem")
+    st.caption("Você ainda não inseriu nem uma imagem")
 
 else:
     image = Image.open(uploaded_file)
